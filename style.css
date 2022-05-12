@@ -1,0 +1,67 @@
+
+main{
+  background: rgb(195,234,255);
+  background: linear-gradient(0deg, rgba(195,234,255,1) 35%, rgba(0,212,255,1) 100%);
+
+  position:relative;
+  height:600px; width:800px;
+  text-align:center;
+}
+
+.character{
+  background:purple;
+  height:12rem;
+  width:6rem;
+  bottom:0;
+  position:absolute;
+  left:50%;
+  margin-left:-3rem;
+}
+.character.gone{
+  background:red;
+  animation-duration:3s;
+  animation-name:move;
+  animation-fill-mode:forwards;
+}
+@keyframes move{
+  from{
+    left:50%;
+  }
+  to{
+    left:100%;
+  }
+}
+
+.character > .head{
+  border-radius:50% 20% 100% 33%;
+  width:12rem; height:12rem;
+  background:yellow;
+  position:absolute;
+  top:-8rem;
+  transform:rotate(30deg);
+  box-shadow:rgba(0,0,255,.5) 1rem 2rem 3rem -1rem;
+  border-right:3rem solid orange;
+}
+.character > .head:before{
+  content:"";
+  display:block;
+  height:2rem;
+  width:2rem;
+  background:rgba(255,255,255,.9);
+  z-index:3;
+  position:absolute;
+  border-radius:50%;
+  bottom:7.5rem;
+  left:3.5rem;
+}
+.character > .head:after{
+  border-radius:50%;
+  height:2rem; width:2rem;
+  background:black;
+  z-index:1;
+  content:"";
+  display:block;
+  border:2rem solid rgba(240,240,240,1);
+  box-shadow:orange .25rem 1rem .25rem;
+}
+
