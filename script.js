@@ -1,6 +1,6 @@
 const main = document.getElementById("main");
 
-main.addEventListener("click", function (event) {
+main.addEventListener("click", event => {
   console.log(event);
 
   if (this.className.indexOf(" gone ") > -1) {
